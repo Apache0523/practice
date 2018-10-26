@@ -22,3 +22,5 @@ print('徐林年龄:%(age) s' % xulin)
 yangxin = dict(name='YangXin', age=18, code='002')
 print("杨鑫信息：", yangxin)
 print("杨鑫姓名：%(name)s" % yangxin)
+del xulin['number'] #删除key
+print('徐林信息：', xulin)
