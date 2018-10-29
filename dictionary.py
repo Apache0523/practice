@@ -42,4 +42,5 @@ teacher = student.copy()
 teacher['五五开'].remove('狒狒')
 print('五五开是：%(姓名)s' % teacher)
 print(student)
+print(teacher)
 
