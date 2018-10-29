@@ -24,3 +24,22 @@ print("杨鑫信息：", yangxin)
 print("杨鑫姓名：%(name)s" % yangxin)
 del xulin['number'] #删除key
 print('徐林信息：', xulin)
+print('徐林信息长度：%d' % len(xulin))
+xulin.clear() #和del区别，一个是直接删除字典，一个是删除所有key
+print("徐林信息：", xulin)
+x = {}
+y = x
+x['name'] = '123'
+m = {}
+n = m
+m = {'name': 123}
+print(n) #注意区别，m重新指向新的内存地址，n指向原来的。x依然指向原来的，所以y也跟着改变
+print(y)
+x.clear()
+print("x执行clear之后的Y：", y)
+student = {'姓名': '小智', '五五开': ['开挂', '狒狒', 30]} #浅复制，原地修改复制后的值，原来的值也会改变
+teacher = student.copy()
+teacher['五五开'].remove('狒狒')
+print('五五开是：%(姓名)s' % teacher)
+print(student)
+
